@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyed Milad Moasheri - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background-color: #3b82f6;
+            transition: width 1s ease-in-out;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #3b82f6;
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .skill-bar {
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+        
+        .header-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Header Section -->
+        <header class="header-bg text-white p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-full h-full opacity-10">
+                <svg class="rotate" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" fill="none" />
+                    <circle cx="50" cy="50" r="30" stroke="white" stroke-width="2" fill="none" />
+                    <circle cx="50" cy="50" r="20" stroke="white" stroke-width="2" fill="none" />
+                </svg>
+            </div>
+            
+            <div class="container mx-auto relative z-10">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="w-40 h-40 rounded-full bg-white p-1 shadow-lg overflow-hidden flex-shrink-0">
+                        <div class="w-full h-full rounded-full bg-blue-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center md:text-left">
+                        <h1 class="text-3xl md:text-4xl font-bold mb-2">Seyed Milad Moasheri</h1>
+                        <p class="text-xl md:text-2xl font-light mb-4">Industrial Engineering & IT Specialist</p>
+                        
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
+                            <span class="bg-blue-700 bg-opacity-30 px-3 py-1 rounded-full text-sm">Industry 4.0</span>
+                            <span class="bg-blue-700 bg-opacity-30 px-3 py-1 rounded-full text-sm">Logistics</span>
+                            <span class="bg-blue-700 bg-opacity-30 px-3 py-1 rounded-full text-sm">Operations Research</span>
+                            <span class="bg-blue-700 bg-opacity-30 px-3 py-1 rounded-full text-sm">Teaching</span>
+                            <span class="bg-blue-700 bg-opacity-30 px-3 py-1 rounded-full text-sm">IT Project Management</span>
+                        </div>
+                        
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                            <a href="mailto:milad.moasheri@gmail.com" class="flex items-center gap-2 hover:text-blue-200 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                                <span>milad.moasheri@gmail.com</span>
+                            </a>
+                            <a href="tel:+96891408306" class="flex items-center gap-2 hover:text-blue-200 transition-colors">
+                                <i class="fas fa-phone"></i>
+                                <span>(+968) 91408306</span>
+                            </a>
+                            <a href="http://www.ecom-oasis.com" target="_blank" class="flex items-center gap-2 hover:text-blue-200 transition-colors">
+                                <i class="fas fa-globe"></i>
+                                <span>www.ecom-oasis.com</span>
+                            </a>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Muscat, Oman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation Tabs -->
+        <div class="bg-white shadow-md sticky top-0 z-20">
+            <div class="container mx-auto">
+                <div class="flex overflow-x-auto whitespace-nowrap py-2 px-4 gap-2">
+                    <button class="tab-btn px-4 py-2 font-medium rounded-md focus:outline-none transition-colors active" data-tab="about">About Me</button>
+                    <button class="tab-btn px-4 py-2 font-medium rounded-md focus:outline-none transition-colors" data-tab="experience">Experience</button>
+                    <button class="tab-btn px-4 py-2 font-medium rounded-md focus:outline-none transition-colors" data-tab="education">Education</button>
+                    <button class="tab-btn px-4 py-2 font-medium rounded-md focus:outline-none transition-colors" data-tab="skills">Skills</button>
+                    <button class="tab-btn px-4 py-2 font-medium rounded-md focus:outline-none transition-colors" data-tab="references">References</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <!-- About Me Section -->
+            <section id="about" class="tab-content active">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-user-circle text-blue-600 mr-2"></i>
+                        About Me
+                    </h2>
+                    <p class="mb-6 text-gray-700 leading-relaxed">
+                        Experienced professional with a strong background in Industrial Engineering and IT, specializing in teaching and logistics. 
+                        Proven track record in academia and industry, with a passion for teaching and integrating technology to enhance learning and operational efficiency. 
+                        Dedicated to student success and committed to continuous professional development.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-3">Research Interests</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="card bg-blue-50 p-4 rounded-lg flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <span>Industry 4.0</span>
+                            </div>
+                            <div class="card bg-blue-50 p-4 rounded-lg flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <span>Logistics and Supply Chain</span>
+                            </div>
+                            <div class="card bg-blue-50 p-4 rounded-lg flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <span>Business</span>
+                            </div>
+                            <div class="card bg-blue-50 p-4 rounded-lg flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <span>Operations Research</span>
+                            </div>
+                            <div class="card bg-blue-50 p-4 rounded-lg flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <span>Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3">Personal Information</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-calendar-alt text-blue-600"></i>
+                                    <span>Date of Birth: January 28, 1994</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-flag text-blue-600"></i>
+                                    <span>Nationality: Iranian</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-venus-mars text-blue-600"></i>
+                                    <span>Gender: Male</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-3">Languages</h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>English (Advanced)</span>
+                                        <span>TOEFL IBT: 109</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Persian (Fluent)</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Arabic (Basic)</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-certificate text-blue-600 mr-2"></i>
+                        Certificates
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="card border border-gray-200 rounded-lg p-4 hover:border-blue-400">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-language"></i>
+                                </div>
+                                <h3 class="font-semibold">TOEFL IBT</h3>
+                            </div>
+                            <p class="text-gray-600">Score: 109 (Reading: 29, Listening: 30, Speaking: 22, Writing: 28)</p>
+                        </div>
+                        <div class="card border border-gray-200 rounded-lg p-4 hover:border-blue-400">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <h3 class="font-semibold">Odoo Project Leader Onboarding Course</h3>
+                            </div>
+                            <p class="text-gray-600">Issued by Odoo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Experience Section -->
+            <section id="experience" class="tab-content">
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-briefcase text-blue-600 mr-2"></i>
+                        Work Experience
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="timeline-item pb-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold">Founder</h3>
+                                <div class="flex items-center gap-2 text-blue-600">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Feb 2025 - Present</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-600 mb-3">
+                                <i class="fas fa-building mr-2"></i>
+                                <span>EcomOasis, Muscat, Oman</span>
+                            </div>
+                            <p class="text-gray-700 mb-3">
+                                Founded and currently managing EcomOasis, providing comprehensive digital services including:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                                <li>Website Design</li>
+                                <li>E-Commerce Development</li>
+                                <li>SEO Services</li>
+                                <li>Digital Marketing</li>
+                            </ul>
+                            <div class="mt-3">
+                                <a href="http://www.ecom-oasis.com" target="_blank" class="text-blue-600 hover:text-blue-800 flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Visit Website</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item pb-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold">IT Project Manager</h3>
+                                <div class="flex items-center gap-2 text-blue-600">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Feb 2022 - Sep 2024</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-600 mb-3">
+                                <i class="fas fa-building mr-2"></i>
+                                <span>Mozaic Technologies, Muscat, Oman</span>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                                <li>Customer Support</li>
+                                <li>Project Management</li>
+                                <li>Technical Team Supervisor</li>
+                                <li>ERP Specialist (Odoo)</li>
+				<li>iVMS and Fleet Management</li>
+				<li>Research & Development</li>
+                                <li>Server and Database Management</li>
+                                <li>Servers Backup/Restore</li>
+                                <li>IoT Integration</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold">Quality Control / Production Site Supervisor</h3>
+                                <div class="flex items-center gap-2 text-blue-600">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Sep 2019 - Dec 2021</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-600 mb-3">
+                                <i class="fas fa-building mr-2"></i>
+                                <span>Peirovan Ghadir Steel Production, Yazd, Iran</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Supervised production processes and maintained quality control standards in steel manufacturing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-chalkboard-teacher text-blue-600 mr-2"></i>
+                        Teaching Experience
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="timeline-item pb-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold">Assistant Lecturer (LTSM Department)</h3>
+                                <div class="flex items-center gap-2 text-blue-600">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Sep 2024 - Feb 2025</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-600 mb-3">
+                                <i class="fas fa-university mr-2"></i>
+                                <span>German University of Technology, Muscat, Oman</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">
+                                Served as Thesis Coordinator and taught the following courses:
+                            </p>
+                            <div class="flex flex-wrap gap-2 ml-4">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Operations Research</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Revenue Management</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Transportation & Traffic</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                <h3 class="text-xl font-semibold">Assistant Lecturer (Industrial Engineering Department)</h3>
+                                <div class="flex items-center gap-2 text-blue-600">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>2019 - 2022</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-600 mb-3">
+                                <i class="fas fa-university mr-2"></i>
+                                <span>Yazd University, Iran</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">
+                                Taught the following courses:
+                            </p>
+                            <div class="flex flex-wrap gap-2 ml-4">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Computer Simulation (Master's level)</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Engineering Economics</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Supply Chain and Logistics Management</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Project Management (Bachelor's level)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education Section -->
+            <section id="education" class="tab-content">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-600 mr-2"></i>
+                        Education
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <div class="bg-blue-50 rounded-lg p-5 h-full pulse">
+                                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mx-auto mb-4">
+                                        <i class="fas fa-user-graduate text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-center mb-2">Master of Science</h3>
+                                    <p class="text-center text-gray-600">Industrial Engineering - Engineering Management</p>
+                                </div>
+                            </div>
+                            
+                            <div class="md:w-2/3">
+                                <div class="timeline-item pb-8">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-semibold">Yazd University</h3>
+                                        <div class="flex items-center gap-2 text-blue-600">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2018 - 2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center text-gray-600 mb-3">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        <span>Iran</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="font-medium">GPA:</span> 3.88/4
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">Thesis:</span> Reducing Waiting Time of ED Patients Using RFID Technology and Discrete Event Simulation: A Case Study
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <div class="bg-blue-50 rounded-lg p-5 h-full pulse">
+                                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mx-auto mb-4">
+                                        <i class="fas fa-university text-2xl"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-center mb-2">Bachelor of Science</h3>
+                                    <p class="text-center text-gray-600">Industrial Engineering</p>
+                                </div>
+                            </div>
+                            
+                            <div class="md:w-2/3">
+                                <div class="timeline-item">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-semibold">Ferdowsi University of Mashhad</h3>
+                                        <div class="flex items-center gap-2 text-blue-600">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2012 - 2018</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center text-gray-600 mb-3">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        <span>Iran</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-medium">Project:</span> Comprehensive Marketing, Technical, Financial, and Economic Studies of Airbag Manufactory
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="skills" class="tab-content">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-tools text-blue-600 mr-2"></i>
+                        Digital Skills
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 flex items-center">
+                                <i class="fas fa-laptop-code text-blue-500 mr-2"></i>
+                                Simulation
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Rockwell ARENA</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Anylogic</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Vensim</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-lg font-semibold mb-4 mt-8 flex items-center">
+                                <i class="fas fa-code text-blue-500 mr-2"></i>
+                                Programming
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>MATLAB</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>C++</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="75%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>JavaScript, HTML, CSS</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Visual Basic</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4 flex items-center">
+                                <i class="fas fa-chart-bar text-blue-500 mr-2"></i>
+                                Data Analytics
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>R</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Spreadsheets</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-lg font-semibold mb-4 mt-8 flex items-center">
+                                <i class="fab fa-microsoft text-blue-500 mr-2"></i>
+                                Microsoft
+                            </h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Excel (VBA)</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Word</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>PowerPoint</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>Access</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>MSP, Visio, Power BI</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill skill-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-lg font-semibold mb-4">Skills Visualization</h3>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <span class="text-sm">Simulation</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span class="text-sm">Programming</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <span class="text-sm">Data Analytics</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <span class="text-sm">Database</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <span class="text-sm">ERP (Odoo)</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                    <span class="text-sm">Server Management</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <span class="text-sm">Project Management</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <span class="text-sm">Teaching</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <span class="text-sm">Languages</span>
+                                </div>
+                                <div class="card bg-white p-4 rounded-lg shadow-sm text-center">
+                                    <div class="w-12 h-12 mx-auto mb-2 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <span class="text-sm">Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- References Section -->
+            <section id="references" class="tab-content">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                        Professional References
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="card border border-gray-200 rounded-lg p-6 hover:border-blue-400">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Dr. Mehdi A. Kamran</h3>
+                                    <p class="text-gray-600">Associate Professor at GUtech</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                    <a href="mailto:mehdi.kamran@gutech.edu.om" class="text-blue-600 hover:text-blue-800">mehdi.kamran@gutech.edu.om</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card border border-gray-200 rounded-lg p-6 hover:border-blue-400">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Abdullah Issa Al Shuayli</h3>
+                                    <p class="text-gray-600">CEO at Mozaic Technologies</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                    <a href="mailto:abdullahs@mozaicweb.com" class="text-blue-600 hover:text-blue-800">abdullahs@mozaicweb.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card border border-gray-200 rounded-lg p-6 hover:border-blue-400">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Professor Hasan Khademi Zare</h3>
+                                    <p class="text-gray-600">Professor at Yazd University, Master's Supervisor</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                    <a href="mailto:HKHADEMIZ@yazd.ac.ir" class="text-blue-600 hover:text-blue-800">HKHADEMIZ@yazd.ac.ir</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card border border-gray-200 rounded-lg p-6 hover:border-blue-400">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold">Professor Yahia Zare Mehrjerdi</h3>
+                                    <p class="text-gray-600">Professor at Yazd University</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                    <a href="mailto:yzare@yazd.ac.ir" class="text-blue-600 hover:text-blue-800">yzare@yazd.ac.ir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="container mx-auto px-4 text-center">
+                <div class="flex justify-center items-center gap-4 mb-4">
+                    <a href="mailto:milad.moasheri@gmail.com" class="hover:text-blue-300 transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="http://www.ecom-oasis.com" target="_blank" class="hover:text-blue-300 transition-colors">
+                        <i class="fas fa-globe text-xl"></i>
+                    </a>
+                    <a href="tel:+96891408306" class="hover:text-blue-300 transition-colors">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                </div>
+                <p>&copy; 2025 Seyed Milad Moasheri. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Tab navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+                    
+                    // Update active tab button
+                    tabBtns.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
+                    btn.classList.add('bg-blue-600', 'text-white');
+                    
+                    // Show selected tab content
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Initialize skill bars
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            // Function to animate skill bars when they come into view
+            function animateSkillBars() {
+                skillBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width;
+                });
+            }
+            
+            // Set up intersection observer for skill bars
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observe the skills section
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+            
+            // Initialize the first tab
+            document.querySelector('.tab-btn.active').click();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93f381abb5cdd1ec',t:'MTc0NzE1MzQ3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
